@@ -1,0 +1,43 @@
+<h1>Listing long_snps</h1>
+
+<%= form_tag long_snps_path, :method=>'get' do %>
+	<p>
+		<%= text_field_tag :search %>
+		<%= submit_tag "Search", :name=>nil %>
+	</p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chr</th>
+      <th>Snp</th>
+      <th>A1</th>
+      <th>A2</th>
+      <th>Maf</th>
+      <th>Nchrobs</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for long_snp in @long_snps %>
+      <tr>
+        <td><%= long_snp.chr %></td>
+        <td><%= long_snp.snp %></td>
+        <td><%= long_snp.a1 %></td>
+        <td><%= long_snp.a2 %></td>
+        <td><%= long_snp.maf %></td>
+        <td><%= long_snp.nchrobs %></td>
+        <td><%= link_to 'Show', long_snp %></td>
+        <td><%= link_to 'Edit', edit_long_snp_path(long_snp) %></td>
+        <td><%= link_to 'Destroy', long_snp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'New Long snp', new_long_snp_path %>

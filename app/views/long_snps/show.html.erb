@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chr:</strong>
+  <%= @long_snp.CHR %>
+</p>
+
+<p>
+  <strong>Snp:</strong>
+  <%= @long_snp.SNP %>
+</p>
+
+<p>
+  <strong>A1:</strong>
+  <%= @long_snp.A1 %>
+</p>
+
+<p>
+  <strong>A2:</strong>
+  <%= @long_snp.A2 %>
+</p>
+
+<p>
+  <strong>Maf:</strong>
+  <%= @long_snp.MAF %>
+</p>
+
+<p>
+  <strong>Nchrobs:</strong>
+  <%= @long_snp.NCHROBS %>
+</p>
+
+<%= link_to 'Edit', edit_long_snp_path(@long_snp) %> |
+<%= link_to 'Back', long_snps_path %>

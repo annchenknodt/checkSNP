@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CHR: 1
+  SNP: MyString
+  A1: 1
+  A2: 1
+  MAF: 9.99
+  NCHROBS: 1
+
+two:
+  CHR: 1
+  SNP: MyString
+  A1: 1
+  A2: 1
+  MAF: 9.99
+  NCHROBS: 1

@@ -1,0 +1,41 @@
+<%= form_for(@long_snp) do |f| %>
+  <% if @long_snp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@long_snp.errors.count, "error") %> prohibited this long_snp from being saved:</h2>
+
+      <ul>
+      <% @long_snp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :CHR %><br>
+    <%= f.number_field :CHR %>
+  </div>
+  <div class="field">
+    <%= f.label :SNP %><br>
+    <%= f.text_field :SNP %>
+  </div>
+  <div class="field">
+    <%= f.label :A1 %><br>
+    <%= f.number_field :A1 %>
+  </div>
+  <div class="field">
+    <%= f.label :A2 %><br>
+    <%= f.number_field :A2 %>
+  </div>
+  <div class="field">
+    <%= f.label :MAF %><br>
+    <%= f.text_field :MAF %>
+  </div>
+  <div class="field">
+    <%= f.label :NCHROBS %><br>
+    <%= f.number_field :NCHROBS %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
